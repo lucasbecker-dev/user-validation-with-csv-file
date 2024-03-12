@@ -5,6 +5,15 @@ public class User {
     private String password;
     private String name;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public User(String username, String password, String name) {
         this.username = username;
         this.password = password;
