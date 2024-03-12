@@ -1,11 +1,12 @@
 package com.coderscampus.assignment3;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class UserService {
     public static User[] parseFileIntoUsers(String fileName, int linesToRead) {
-        try (BufferedReader bufferedReader = new BufferedReader(new java.io.FileReader(fileName))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             User[] users = new User[linesToRead];
             int currentLineCount = 0;
             String line;
