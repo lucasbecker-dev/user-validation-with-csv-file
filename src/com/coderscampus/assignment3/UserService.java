@@ -3,6 +3,7 @@ package com.coderscampus.assignment3;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class UserService {
     public static User[] parseFileIntoUsers(String filePath, int linesToRead) {
@@ -20,4 +21,15 @@ public class UserService {
             throw new RuntimeException(e);
         }
     }
+
+    public static UserCredentials getUserCredentials(Scanner scanner) {
+        String username;
+        String password;
+        System.out.print("Enter username: ");
+        username = scanner.nextLine();
+        System.out.print("Enter password: ");
+        password = scanner.nextLine();
+        return new UserCredentials(username, password);
+    }
+
 }
