@@ -5,8 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class UserService {
-    public static User[] parseFileIntoUsers(String fileName, int linesToRead) {
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
+    public static User[] parseFileIntoUsers(String filePath, int linesToRead) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             User[] users = new User[linesToRead];
             int currentLineCount = 0;
             String line;
