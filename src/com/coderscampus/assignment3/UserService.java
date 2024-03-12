@@ -12,6 +12,7 @@ public class UserService {
             while ((line = bufferedReader.readLine()) != null && currentLineCount < linesToRead) {
                 String[] splitLine = line.split(",");
                 users[currentLineCount] = new User(splitLine[0], splitLine[1], splitLine[2]);
+                ++currentLineCount;
             }
             return users;
         } catch (IOException e) {
