@@ -32,4 +32,8 @@ public class UserService {
         return new UserCredentials(username, password);
     }
 
+    public static boolean validateUserCredentials(User user, UserCredentials userCredentials) {
+        // TODO: finish this method
+        return false;
+    }
 }
