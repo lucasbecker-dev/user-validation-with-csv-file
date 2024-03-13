@@ -54,4 +54,28 @@ public class UserService {
         }
         return null;
     }
+
+    public static void userLogin(Scanner scanner, User[] users) throws NullPointerException {
+        if (users == null) {
+            throw new NullPointerException("Error: users array is null!");
+        }
+        boolean loginSuccess = false;
+        for (int i = 0; i < MAX_LOGIN_ATTEMPTS; i++) {
+            UserCredentials userCredentials = createUserCredentials(scanner);
+            if (userCredentials == null) {
+                throw new NullPointerException("Error: userCredentials is null");
+            }
+            User validUser = validateUserCredentials(users, userCredentials);
+            if (validUser != null) {
+                System.out.println("Welcome " + validUser.getName());
+                loginSuccess = true;
+                break;
+            } else {
+                System.out.println("Invalid login, please try again. Remaining login attempts: " + (MAX_LOGIN_ATTEMPTS - (i + 1)));
+            }
+        }
+        if (!loginSuccess) {
+            System.out.println("Too many failed login attempts, you are now locked out.");
+        }
+    }
 }
