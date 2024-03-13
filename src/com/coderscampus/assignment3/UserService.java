@@ -21,7 +21,7 @@ public class UserService {
             }
             return users;
         } catch (IOException e) {
-            System.out.println("File " + filePath + " was not found.");
+            System.out.println("File " + filePath + " was not found: " + e.getMessage());
             return null;
         }
     }
@@ -34,8 +34,11 @@ public class UserService {
             username = scanner.nextLine();
             System.out.print("Enter password: ");
             password = scanner.nextLine();
-        } catch (NoSuchElementException | IllegalStateException e) {
-            System.out.println(e.getMessage());
+        } catch (IllegalStateException e) {
+            System.out.println("Scanner is closed: " + e.getMessage());
+            return null;
+        } catch (NoSuchElementException e) {
+            System.out.println("No input detected: " + e.getMessage());
             return null;
         }
         return new UserCredentials(username, password);
@@ -43,6 +46,7 @@ public class UserService {
 
     public static User validateUserCredentials(User[] users, UserCredentials userCredentials) {
         String formattedUsername = userCredentials.getUsername().toUpperCase();
+
         for (User user : users) {
             if (user.getUsername().toUpperCase().equals(formattedUsername) && user.getPassword().equals(userCredentials.getPassword())) {
                 return user;
