@@ -3,6 +3,7 @@ package com.coderscampus.assignment3;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class UserService {
@@ -20,17 +21,23 @@ public class UserService {
             }
             return users;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("File " + filePath + " was not found.");
+            return null;
         }
     }
 
     public static UserCredentials createUserCredentials(Scanner scanner) {
         String username;
         String password;
-        System.out.print("Enter username: ");
-        username = scanner.nextLine();
-        System.out.print("Enter password: ");
-        password = scanner.nextLine();
+        try {
+            System.out.print("Enter username: ");
+            username = scanner.nextLine();
+            System.out.print("Enter password: ");
+            password = scanner.nextLine();
+        } catch (NoSuchElementException | IllegalStateException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
         return new UserCredentials(username, password);
     }
 
