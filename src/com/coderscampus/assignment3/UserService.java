@@ -24,7 +24,7 @@ public class UserService {
         }
     }
 
-    public static UserCredentials getUserCredentials(Scanner scanner) {
+    public static UserCredentials createUserCredentials(Scanner scanner) {
         String username;
         String password;
         System.out.print("Enter username: ");
