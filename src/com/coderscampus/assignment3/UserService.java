@@ -34,8 +34,13 @@ public class UserService {
         return new UserCredentials(username, password);
     }
 
-    public static boolean validateUserCredentials(User user, UserCredentials userCredentials) {
-        // TODO: finish this method
-        return false;
+    public static User validateUserCredentials(User[] users, UserCredentials userCredentials) {
+        String formattedUsername = userCredentials.getUsername().toUpperCase();
+        for (User user : users) {
+            if (user.getUsername().toUpperCase().equals(formattedUsername) && user.getPassword().equals(userCredentials.getPassword())) {
+                return user;
+            }
+        }
+        return null;
     }
 }
