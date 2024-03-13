@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ba64ad9-5e3e-49ca-a143-392008851afc" name="Changes" comment="added UserCredentials.java">
+    <list default="true" id="8ba64ad9-5e3e-49ca-a143-392008851afc" name="Changes" comment="added method stub validateUserCredentials">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/coderscampus/assignment3/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/coderscampus/assignment3/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +160,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710276730236</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="changed &quot;filaName&quot; to &quot;filePath&quot; for clarity">
+      <option name="closed" value="true" />
+      <created>1710277101659</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710277101659</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added UserCredentials validator to UserService">
+      <option name="closed" value="true" />
+      <created>1710277151568</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710277151568</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added method stub validateUserCredentials">
+      <option name="closed" value="true" />
+      <created>1710277186756</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710277186756</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,6 +198,9 @@
     <MESSAGE value="added global Scanner to main" />
     <MESSAGE value="ran IntelliJ's formatter" />
     <MESSAGE value="added UserCredentials.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="added UserCredentials.java" />
+    <MESSAGE value="changed &quot;filaName&quot; to &quot;filePath&quot; for clarity" />
+    <MESSAGE value="added UserCredentials validator to UserService" />
+    <MESSAGE value="added method stub validateUserCredentials" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method stub validateUserCredentials" />
   </component>
 </project>
