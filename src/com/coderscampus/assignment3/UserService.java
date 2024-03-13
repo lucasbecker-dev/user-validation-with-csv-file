@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class UserService {
+    public static final int MAX_LOGIN_ATTEMPTS = 5;
+
     public static User[] parseFileIntoUsers(String filePath, int linesToRead) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             User[] users = new User[linesToRead];
